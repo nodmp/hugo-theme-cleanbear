@@ -1,6 +1,6 @@
 <style>
   body {
-    font-family: Verdana, sans-serif;
+    font-family: -apple-system,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial!important;
     margin: auto;
     padding: 20px;
     max-width: 720px;
@@ -62,29 +62,47 @@
     max-width: 100%;
   }
 
-  code {
-    padding: 2px 5px;
-    background-color: #f2f2f2;
-  }
-
-  pre code {
-    color: #222;
-    display: block;
-    padding: 20px;
-    white-space: pre-wrap;
-    font-size: 14px;
-    overflow-x: auto;
-  }
-
-  div.highlight pre {
-    background-color: initial;
-    color: initial;
-  }
-
-  div.highlight code {
-    background-color: unset;
-    color: unset;
-  }
+  /* Code */
+code,pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: #bf616a;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f9f9f9;
+  overflow-x: auto;
+  tab-size: 4;
+  -moz-tab-size:4;
+  padding: 0;
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+.highlight {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
 
   blockquote {
     border-left: 1px solid #999;
@@ -125,6 +143,39 @@
   ul.blog-posts li a:visited {
     color: #8b6fcb;
   }
+
+  .nav {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .nav-title {
+    font-family: 'Lora', sans-serif;
+    font-size: 1.5rem;
+    color: black;
+    letter-spacing: -0.055rem;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .nav-links a {
+    font-family: "Fira Code", monospace;
+    text-transform: lowercase;
+    color: #b3b3b3;
+    margin-right: 2rem;
+    font-weight: 300;
+    text-align: right;
+    text-decoration: none;
+  }
+
+  .nav-links a:last-of-type {
+    margin-right: 0;
+  }
+
 
   @media (prefers-color-scheme: dark) {
     body {
@@ -169,5 +220,4 @@
       color: #aaa;
     }
   }
-
 </style>

@@ -1,4 +1,18 @@
-<a href="{{ "" | relURL }}" class="title">
-  <h2>{{ .Site.Title }}</h2>
-</a>
-<nav>{{- partial "nav.html" . -}}</nav>
+<!-- <nav>{{- partial "nav.html" . -}}</nav> -->
+
+<nav class="nav">
+  <a class="nav-title" href="{{ .Site.BaseURL }}">
+    {{ .Site.Title }}
+  </a>
+
+  <div class="nav-links">
+    {{ range.Site.Menus.main }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+
+    {{ with .Site.GetPage "/blog" }}
+    <a href="{{ "blog" | relURL }}">Posts</a>
+    {{ end }}
+  </div>
+
+</nav>
